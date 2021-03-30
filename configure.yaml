@@ -1,0 +1,35 @@
+choice: 'train' #'test'
+model_type: 'transformer' #'deep' , 'traditional'
+transformerModel: 'bert-base-uncased'
+path_to_pretrained_WE: '/home/akkasi/pythonProject/fasttext.vec'
+path_to_Word2Index: 
+path_to_train_data: '/home/akkasi/pythonProject/‌BERT_CNN_TextClassification/data/data1.tsv'
+path_to_test_data:
+path_to_write_predictions: 'predictions.txt'
+write_predictions: True
+deepModel_type: 'cnn' #'lstm'#
+path_to_model: 
+path_to_save_model: 'model.pt'
+save_model: True
+freeze_embd: True
+freez_transformer: True
+embd_dim: 200
+dropout: 0.5
+batch_size: 32
+epochs: 1
+max_len: 100
+lr: 2e-5
+###################################################################
+####################### CNN #######################################
+kernels:
+  - 3
+  # - 4
+  # - 5
+n_kernels: 100
+
+######################## LSTM ####################################
+hidden_size: 100
+bidirectional: True
+n_lstm_layers: 2
+attention: True
+########################      ####################################
